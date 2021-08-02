@@ -1,0 +1,4 @@
+thinker
+PIL
+torchvision
+MyQR
