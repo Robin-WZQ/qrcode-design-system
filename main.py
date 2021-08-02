@@ -8,7 +8,6 @@ import tkinter
 import tkinter.filedialog
 from PIL import Image,ImageTk
 from torchvision import transforms as transforms
-import os
 from MyQR import myqr
 
 
@@ -28,7 +27,7 @@ img2 = tkinter.Label(win)
 
 #choose a picture 
 def choose_file():
-	select_file = tkinter.filedialog.askopenfilename(title='选择图片')
+	select_file = tkinter.filedialog.askopenfilename(title='select the picture')
 	global file_name
 	file_name=select_file
 	e.set(select_file)
@@ -68,7 +67,7 @@ def qrcode_generate():
         img2  = tkinter.Label(win,image=render)
         img2.image = render
         img2.place(x=800,y=100)
-    tkinter.Button(root,text='确认',width=10,command = show).grid(row=3,column=0,padx=10,pady=5)  #design function 
+    tkinter.Button(root,text='confirm',width=10,command = show).grid(row=3,column=0,padx=10,pady=5)  #design function 
 
 #show the path
 e = tkinter.StringVar()
